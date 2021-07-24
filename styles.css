@@ -1,0 +1,379 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Oxygen', sans-serif;
+}
+
+body {
+  background-color: #202328;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1800px;
+}
+
+header {
+  display: flex;
+  min-height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul li {
+  list-style: none;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: white;
+  margin-left: 2.5rem;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+header ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+header ul li a:hover::after {
+  transform: scaleX(1);
+}
+
+.logo {
+  max-width: 5%;
+}
+
+.background {
+  height: 90vh;
+  background-image: url(/images/MKRA_Gallery_005.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.intro {
+  position: absolute;
+  right: 0;
+  top: 15%;
+  background-color: #202328;
+  padding: 2rem 1rem 3rem 4rem;
+  border-top: 15px solid rgba(32, 35, 40, 0.3);
+  border-left: 15px solid rgba(32, 35, 40, 0.3);
+  border-bottom: 15px solid rgba(32, 35, 40, 0.3);
+  background-clip: padding-box; 
+}
+
+.intro h1 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.intro h2 {
+  color: white;
+  margin-top: 2rem;
+}
+
+.intro h3 {
+  color: white;
+  margin-top: 1rem;
+}
+
+.intro::before {
+  content: 'INTRODUCING';
+  position: absolute;
+  left: -115px;
+  top: 40px;
+  transform: rotate(90deg);
+  color: white;
+  background-color: rgba(32, 35, 40, 0.7);
+  font-size: 1.25rem;
+  padding: 0.5rem;
+}
+
+.features {
+  min-height: 100vh;
+  margin-top: 10rem;
+}
+
+.swiper-slide {
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-container {
+  padding: 2rem;
+}
+
+.swiper-container img {
+  max-width: 40%;
+  z-index: -1;
+}
+
+.description {
+  padding: 1rem 0;
+  max-width: 30%;
+}
+
+.description h2 {
+  margin-bottom: 3rem;
+  margin-right: -25rem;
+  margin-top: -4rem;
+  z-index: 1;
+  font-size: 4rem;
+  color: rgb(3, 109, 248);
+}
+
+.description p {
+  margin-right: 5rem;
+  text-align: left;
+  font-size: 1.25rem;
+}
+
+.specifications {
+  margin-top: 10rem;
+}
+
+.specifications h1, h2{
+  color: white;
+}
+
+.specifications h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+table {
+  margin: 0 auto;
+  border-spacing: 15rem 1rem;
+}
+
+table th {
+  color: white;
+  font-size: 2.5rem;
+  line-height: 5rem;
+}
+
+tr td {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.gallery {
+  margin-top: 10rem;
+  min-height: 100vh;
+}
+
+.gallery h1 {
+  color: white;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  /* grid-template-rows: repeat(3, 15rem); */
+  gap: 1rem;
+  grid-auto-rows: 240px;
+  
+  /* grid-auto-flow: dense; */
+  /* grid-template-rows: 1fr 1fr 1fr; */
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .gallery-container img {
+  max-width: 100%;
+} */
+
+.grid-item1 {
+  background-image: url(/images/MKRA_Gallery_001.jpg);
+  /* grid-row: span 3 / auto;
+  grid-column: span 3 / auto; */
+}
+
+.grid-item2 {
+  background-image: url(/images/MKRA_Gallery_009.jpg);
+  /* grid-column: span 2 / auto; */
+}
+
+.grid-item3 {
+  background-image: url(/images/MKRA_Gallery_008.jpg);
+}
+
+.grid-item4 {
+  background-image: url(/images/MKRA_Gallery_007.jpg);
+  /* grid-column: span 2 / auto; */
+  /* grid-row: span 2 / auto; */
+}
+
+.grid-item5 {
+  background-image: url(/images/MKRA_Gallery_003.jpg);
+  /* grid-row: span 2 / auto; */
+}
+
+.grid-item6 {
+  background-image: url(/images/MKRA_Gallery_012.jpg);
+  /* grid-column: span 3 / auto; */
+  /* grid-row: span 2 / auto; */
+}
+
+.grid-item7 {
+  background-image: url(/images/MKRA_Gallery_002.jpg);
+  /* grid-column: span 3 / auto; */
+  /* grid-row: span 2 / auto; */
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  margin: 2rem 1rem 2rem 1rem;
+}
+
+@media (max-width: 1300px) {
+  
+  header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  header ul {
+    flex-direction: column;
+    margin-bottom: 1rem;
+  }
+
+  header ul li a {
+    margin-left: 0;
+    font-size: 1rem;
+  }
+
+  .logo {
+    max-width: 20%;
+  }
+
+  .intro {
+    padding: 0;
+  }
+
+  .intro h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro h2 {
+    font-size: 1rem;
+  }
+
+  .intro::before {
+    font-size: 1rem;
+  }
+
+  .background {
+    background-position: center;
+  }
+
+  .swiper-container img{
+    max-width: 80%;
+  }
+
+  .swiper-slide {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .description {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .description h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .description p {
+    margin: 0;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+
+  .specifications h1 {
+    font-size: 2rem;
+  }
+
+  table {
+    border-spacing: 1rem 1rem;
+  }
+
+  table th {
+    font-size: 1rem;
+  }
+
+  table tr td {
+    font-size: 1rem;
+  }
+
+  .footer {
+    color: white;
+    text-align: center;
+    margin: 2rem 1rem 2rem 1rem;
+  }
+  
+}
+
+@media (min-width: 600px) {
+  .grid-item1 {
+    grid-row: span 3 / auto;
+    grid-column: span 3 / auto;
+  }
+  
+  .grid-item2 {
+    grid-column: span 2 / auto;
+  }
+   
+  .grid-item4 {
+    grid-column: span 2 / auto;
+    grid-row: span 2 / auto;
+  }
+  
+  .grid-item5 {
+    grid-row: span 2 / auto;
+  }
+  
+  .grid-item6 {
+    grid-column: span 3 / auto;
+    grid-row: span 2 / auto;
+  }
+  
+  .grid-item7 {
+    grid-column: span 3 / auto;
+    grid-row: span 2 / auto;
+  }
+}
